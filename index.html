@@ -13,20 +13,27 @@
                 vertical-align: middle;
                 padding:20px;
          }
+         body{
+                background-color: #f8f6f2;
+                background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
+                background-size: 5px 5px;
+         }
+
 </style>
 </head>
 
 <body>
-    <h1>Your Memory</h1>
-    <p>Rewind time! What were you up to back then?
-    </p>
+    
     <script>
         var sound1 = new buzz.sound("sound/Childhood1.mp3");
         var sound2 = new buzz.sound("sound/Volcano.mp3");
-        var sound3 = new buzz.sound("sound/Yeah.mp3");
+        var sound3 = new buzz.sound("sound/Cheer.mp3");
         var sound4 = new buzz.sound("sound/Broken.mp3");
         var sound5 = new buzz.sound("sound/Sobbing1.mp3");
         var sound6 = new buzz.sound("sound/Regret.mp3");
+        var sound7 = new buzz.sound("sound/Shame.mp3");
+        var sound8 = new buzz.sound("sound/Clam.mp3");
+        var sound9 = new buzz.sound("sound/Joy.mp3");
 
         window.onload = function(){
             document.getElementById('Childhood1').addEventListener('mouseenter', function () {sound1.play();});
@@ -41,24 +48,30 @@
             document.getElementById('Sadness1').addEventListener('mouseleave', function () {sound5.stop();});
             document.getElementById('Regret1').addEventListener('mouseenter', function (){sound6.play();});
             document.getElementById('Regret1').addEventListener('mouseleave', function () {sound6.stop();});
+            document.getElementById('Shame1').addEventListener('mouseenter', function (){sound7.play();});
+            document.getElementById('Shame1').addEventListener('mouseleave', function () {sound7.stop();});
+            document.getElementById('Clam1').addEventListener('mouseenter', function (){sound8.play();});
+            document.getElementById('Clam1').addEventListener('mouseleave', function () {sound8.stop();});
+            document.getElementById('Joy11').addEventListener('mouseenter', function (){sound9.play();});
+            document.getElementById('Joy11').addEventListener('mouseleave', function () {sound9.stop();});
 
         };
     </script>
 
     <div class="row">
-        <div class="image-container"><img src="img/Joy11.png" width="200" height="200"></div>
-        <div class="image-container"><img id="Childhood1" src="img/Childhood1.png" width="200" height="200"></div>
-        <div class="image-container"><img src="img/clam1.png" width="200" height="200"></div>
+        <div class="image-container"><img id="Joy11" src="img/Joy11.png" onmouseenter="this.src='img/Joy22.png';" onmouseleave="this.src='img/Joy11.png';" width="200" height="200"></div>
+        <div class="image-container"><img id="Childhood1" src="img/Childhood1.png" onmouseenter="this.src='img/Childhood2.png';" onmouseleave="this.src='img/Childhood1.png';" width="200" height="200"></div>
+        <div class="image-container"><img id="Clam1" src="img/clam1.png" onmouseenter="this.src='img/clam2.png';" onmouseleave="this.src='img/clam1.png';"  width="230" height="230"></div>
     </div>
     <div class="row">
-        <div class="image-container"><img id="Pride1" src="img/Pride1.png" width="200" height="200"></div>
-        <div class="image-container"><img id="Sadness1" src="img/Sadness1.png" width="220" height="220"></div>
-        <div class="image-container"><img id="Anger1" src="img/Anger1.png" width="250" height="250"></div>
+        <div class="image-container"><img id="Pride1" src="img/Pride1.png" onmouseenter="this.src='img/Pride2.png';" onmouseleave="this.src='img/Pride1.png';"  width="220" height="220"></div>
+        <div class="image-container"><img id="Sadness1" src="img/Sadness1.png" onmouseenter="this.src='img/Sadness2.png';" onmouseleave="this.src='img/Sadness1.png';"  width="220" height="220"></div>
+        <div class="image-container"><img id="Anger1" src="img/Anger1.png" onmouseenter="this.src='img/Anger2.png';" onmouseleave="this.src='img/Anger1.png';"  width="240" height="240"></div>
     </div>
     <div class="row">
-        <div class="image-container"><img id="Hurt1" src="img/Hurt1.png" width="200" height="200"></div>
-        <div class="image-container"><img id="Regret1" src="img/Regret1.png" width="200" height="200"></div>
-        <div class="image-container"><img src="img/Shame1.png" width="200" height="200"></div>
+        <div class="image-container"><img id="Hurt1" src="img/Hurt1.png" onmouseenter="this.src='img/Hurt2.png';" onmouseleave="this.src='img/Hurt1.png';"  width="200" height="200"></div>
+        <div class="image-container"><img id="Regret1" src="img/Regret1.png" onmouseenter="this.src='img/Regret2.png';" onmouseleave="this.src='img/Regret1.png';"  width="200" height="200"></div>
+        <div class="image-container"><img id="Shame1" src="img/Shame1.png" onmouseenter="this.src='img/Shame2.png';" onmouseleave="this.src='img/Shame1.png';"  width="200" height="200"></div>
     </div>
 </body>
 
