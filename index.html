@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title> Memory</title> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"> 
+</script>
+<style>
+         .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+         }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+         }
+</style>
+</head>
+
+<body>
+    <h1>Your Memory</h1>
+    <p>Rewind time! What were you up to back then?
+    </p>
+    <script>
+        var sound1 = new buzz.sound("sound/Childhood1.mp3");
+        var sound2 = new buzz.sound("sound/Volcano.mp3");
+        var sound3 = new buzz.sound("sound/Yeah.mp3");
+        var sound4 = new buzz.sound("sound/Broken.mp3");
+        var sound5 = new buzz.sound("sound/Sobbing1.mp3");
+        var sound6 = new buzz.sound("sound/Regret.mp3");
+
+        window.onload = function(){
+            document.getElementById('Childhood1').addEventListener('mouseenter', function () {sound1.play();});
+            document.getElementById('Childhood1').addEventListener('mouseleave', function () {sound1.stop();});
+            document.getElementById('Anger1').addEventListener('mouseenter', function (){sound2.play();});
+            document.getElementById('Anger1').addEventListener('mouseleave', function () {sound2.stop();});
+            document.getElementById('Pride1').addEventListener('mouseenter', function (){sound3.play();});
+            document.getElementById('Pride1').addEventListener('mouseleave', function () {sound3.stop();});
+            document.getElementById('Hurt1').addEventListener('mouseenter', function (){sound4.play();});
+            document.getElementById('Hurt1').addEventListener('mouseleave', function () {sound4.stop();});
+            document.getElementById('Sadness1').addEventListener('mouseenter', function (){sound5.play();});
+            document.getElementById('Sadness1').addEventListener('mouseleave', function () {sound5.stop();});
+            document.getElementById('Regret1').addEventListener('mouseenter', function (){sound6.play();});
+            document.getElementById('Regret1').addEventListener('mouseleave', function () {sound6.stop();});
+
+        };
+    </script>
+
+    <div class="row">
+        <div class="image-container"><img src="img/Joy11.png" width="200" height="200"></div>
+        <div class="image-container"><img id="Childhood1" src="img/Childhood1.png" width="200" height="200"></div>
+        <div class="image-container"><img src="img/clam1.png" width="200" height="200"></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="Pride1" src="img/Pride1.png" width="200" height="200"></div>
+        <div class="image-container"><img id="Sadness1" src="img/Sadness1.png" width="220" height="220"></div>
+        <div class="image-container"><img id="Anger1" src="img/Anger1.png" width="250" height="250"></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="Hurt1" src="img/Hurt1.png" width="200" height="200"></div>
+        <div class="image-container"><img id="Regret1" src="img/Regret1.png" width="200" height="200"></div>
+        <div class="image-container"><img src="img/Shame1.png" width="200" height="200"></div>
+    </div>
+</body>
+
+</html>
